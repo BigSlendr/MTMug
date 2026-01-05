@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MT Mug | Coffee & Culture</title>
+  <meta name="description" content="MT Mug is a premium coffee brand built on ritual, culture, and craft." />
+
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MT Mug Home">
+        <!-- If you have a logo, use this:
+        <img src="assets/images/logo.png" alt="MT Mug logo" class="brand-logo" />
+        -->
+        <span class="brand-mark">MT</span>
+        <span class="brand-name">Mug</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Coffee is ritual.</p>
+          <h1>MT Mug — Coffee & Culture</h1>
+          <p class="lead">
+            Crafted for early mornings, late nights, and everything in between.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="shop.html">Shop Blends</a>
+            <a class="btn btn-ghost" href="about.html">Our Story</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Featured product">
+          <div class="hero-card-top">
+            <p class="tag">Featured</p>
+            <h2 class="h3">Borough Blend</h2>
+            <p class="muted">Smooth. Bold. Balanced.</p>
+          </div>
+          <div class="hero-card-bottom">
+            <p class="price">From $14.99</p>
+            <a class="text-link" href="shop.html">View details →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Built on craft.</h2>
+        <p class="section-subtitle">Simple, premium, and consistent — every bag.</p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Quality First</h3>
+            <p>Small-batch mindset with a premium finish.</p>
+          </article>
+          <article class="card">
+            <h3>Culture Driven</h3>
+            <p>Brand storytelling rooted in real life, not hype.</p>
+          </article>
+          <article class="card">
+            <h3>Made for Routine</h3>
+            <p>Daily coffee that feels like a reset button.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Get the drops.</h2>
+          <p class="muted">New blends, limited releases, and merch announcements.</p>
+        </div>
+        <form class="cta-form" onsubmit="return false;">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" type="email" placeholder="you@email.com" />
+          <button class="btn" type="button" id="subscribeBtn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> MT Mug Coffee Co.</p>
+      <div class="footer-links">
+        <a href="contact.html" class="text-link">Contact</a>
+        <a href="#" class="text-link">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
