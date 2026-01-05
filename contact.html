@@ -1,1 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | MT Mug</title>
+  <meta name="description" content="Contact MT Mug for orders, wholesale, collabs, and press." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MT Mug Home">
+        <span class="brand-mark">MT</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="culture.html">Culture</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="page-hero">
+      <h1>Contact</h1>
+      <p>Wholesale, collabs, questions — send it.</p>
+    </section>
+
+    <section class="content-block">
+      <h2>Email</h2>
+      <p><a href="mailto:hello@mtmug.com">hello@mtmug.com</a></p>
+
+      <h2>Social</h2>
+      <p>
+        <a href="#" rel="noopener">Instagram</a>
+        ·
+        <a href="#" rel="noopener">TikTok</a>
+      </p>
+    </section>
+
+    <section class="content-block">
+      <h2>Quick form</h2>
+      <form class="form" action="#" method="post">
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send</button>
+        <p class="form-note">This form is a placeholder. If you want it to actually send, I’ll wire it up to Formspree or Netlify Forms.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="y"></span> MT Mug. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
