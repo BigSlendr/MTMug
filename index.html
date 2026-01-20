@@ -27,8 +27,12 @@
   <header class="site-header site-header--sticky">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="MT Mug Home">
-        <span class="brand-mark">MT</span>
-        <span class="brand-name">Mug</span>
+        <img
+          class="brand-logo"
+          src="assets/images/MT-Mug-Logo.png"
+          alt="MT Mug Coffee"
+          loading="eager"
+        />
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
@@ -66,75 +70,100 @@
           </div>
         </div>
 
-        <!-- Hero image (replace src with your photo) -->
         <div class="hero-media" aria-label="Coffee lifestyle image">
           <img
-            src="assets/images/hero-coffee.jpg"
-            alt="A warm cup of coffee on a table"
-            loading="lazy"
+            src="assets/images/Hero-Coffee.png"
+            alt="MT Mug Coffee lineup on a table with a warm, cozy vibe"
+            loading="eager"
           />
         </div>
 
       </div>
     </section>
 
-    <!-- Shop Paths (now with images) -->
+    <!-- Shop Paths (wired to your real images) -->
     <section class="section section-paths" aria-label="Shop categories">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Shop your way.</h2>
-          <p class="section-subtitle">Find your daily blend, stock up, or grab a gift.</p>
+          <p class="section-subtitle">Find your daily blend, stock up, or lock in your routine.</p>
         </div>
 
         <div class="grid-4">
           <a class="card card-link card-media" href="shop.html" aria-label="Shop all coffee">
-            <img src="assets/images/category-all.jpg" alt="" loading="lazy" />
+            <img src="assets/images/5-Borough-Coffee.png" alt="MT Mug five borough coffee lineup" loading="lazy" />
             <h3>Shop All</h3>
             <p class="muted">Explore the full lineup.</p>
             <span class="text-link">Browse →</span>
           </a>
 
-          <a class="card card-link card-media" href="shop.html" aria-label="Shop bundles">
-            <img src="assets/images/category-bundles.jpg" alt="" loading="lazy" />
+          <a class="card card-link card-media" href="shop.html#bundles" aria-label="Shop bundles">
+            <img src="assets/images/3-Borough-Bundle.png" alt="MT Mug three borough bundle" loading="lazy" />
             <h3>Borough Bundles</h3>
             <p class="muted">Save when you stock up.</p>
             <span class="text-link">Shop bundles →</span>
           </a>
 
-          <a class="card card-link card-media" href="shop.html" aria-label="Shop gifts">
-            <img src="assets/images/category-gifts.jpg" alt="" loading="lazy" />
-            <h3>Gifts</h3>
-            <p class="muted">Boxes, cards, and essentials.</p>
-            <span class="text-link">Gift it →</span>
+          <a class="card card-link card-media" href="about.html#routine" aria-label="Coffee at work routine">
+            <img src="assets/images/Coffee-At-Work.png" alt="Coffee at work scene with a laptop and a steaming mug" loading="lazy" />
+            <h3>Office Ritual</h3>
+            <p class="muted">Built for the daily grind.</p>
+            <span class="text-link">See the vibe →</span>
           </a>
 
-          <a class="card card-link card-media" href="shop.html" aria-label="Brewing guides">
-            <img src="assets/images/category-brewing.jpg" alt="" loading="lazy" />
+          <a class="card card-link card-media" href="about.html#brewing" aria-label="Brewing and pour over">
+            <img src="assets/images/Brew-Action.png" alt="Pour over coffee brewing action" loading="lazy" />
             <h3>Brewing</h3>
-            <p class="muted">Guides + gear for your setup.</p>
+            <p class="muted">Guides + methods that fit your setup.</p>
             <span class="text-link">Learn →</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Featured (lighter alternative to hard promo) -->
+    <!-- Shop by Borough (map section) -->
+    <section class="section section-map" aria-label="Shop by borough">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Shop by Borough</h2>
+          <p class="section-subtitle">Pick your borough and find your blend.</p>
+        </div>
+
+        <div class="map-card">
+          <img
+            src="assets/images/Borough-Map.png"
+            alt="Map of New York City showing the five boroughs"
+            loading="lazy"
+          />
+
+          <div class="map-actions" aria-label="Shop by borough links">
+            <a class="pill-link" href="shop.html#brooklyn">Brooklyn</a>
+            <a class="pill-link" href="shop.html#manhattan">Manhattan</a>
+            <a class="pill-link" href="shop.html#queens">Queens</a>
+            <a class="pill-link" href="shop.html#bronx">The Bronx</a>
+            <a class="pill-link" href="shop.html#staten-island">Staten Island</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured (use a real bag image you already have) -->
     <section class="section section-featured" aria-label="Featured product">
       <div class="container featured-inner">
         <div class="featured-copy">
           <p class="tag">Featured</p>
-          <h2>Borough Blend</h2>
-          <p class="muted">Smooth, bold, and balanced — built for daily drinking.</p>
+          <h2>The Five Borough Collection</h2>
+          <p class="muted">Five roasts. One city. Built for daily drinking and gifting.</p>
           <div class="actions">
-            <a class="btn" href="shop.html">Shop Borough Blend</a>
-            <a class="btn btn-ghost" href="shop.html">View all blends</a>
+            <a class="btn" href="shop.html">Shop the Collection</a>
+            <a class="btn btn-ghost" href="shop.html#bundles">View bundles</a>
           </div>
         </div>
 
         <div class="featured-media">
           <img
-            src="assets/images/featured-bag.jpg"
-            alt="MT Mug Borough Blend coffee bag"
+            src="assets/images/5-Borough-Coffee.png"
+            alt="MT Mug Coffee five borough lineup"
             loading="lazy"
           />
         </div>
@@ -164,8 +193,8 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section section-cta">
+    <!-- CTA (optional beans background via CSS) -->
+    <section class="section section-cta section-cta--beans" aria-label="Email signup">
       <div class="container cta-inner">
         <div>
           <h2>Get the drops.</h2>
