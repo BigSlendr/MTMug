@@ -4,71 +4,202 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop | MT Mug</title>
-  <meta name="description" content="Shop MT Mug coffee, gear, and limited drops." />
+  <meta name="description" content="Shop MT Mug coffee, bundles, and borough blends." />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Header (match your index header style/classes) -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="MT Mug Home">
-        <span class="brand-mark">MT</span>
+        <img class="brand-logo" src="assets/images/MT-Mug-Logo.png" alt="MT Mug Coffee" />
       </a>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="shop.html" aria-current="page">Shop</a>
-        <a href="culture.html">Culture</a>
-        <a href="contact.html">Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="shop.html" aria-current="page">Shop</a>
+        <a class="nav-link" href="culture.html">Culture</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="page-hero">
-      <h1>Shop</h1>
-      <p>Small-batch coffee and clean essentials. Limited drops rotate — if it’s here, it’s meant to be.</p>
+  <main id="main">
+
+    <!-- Page Hero -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1 class="section-title">Shop</h1>
+          <p class="section-subtitle">
+            Pick your borough, lock in your routine, and keep the mug filled.
+          </p>
+        </div>
+
+        <!-- Quick jump pills -->
+        <div class="hero-notes" aria-label="Jump to borough">
+          <a class="pill-link" href="#bronx">The Bronx</a>
+          <a class="pill-link" href="#manhattan">Manhattan</a>
+          <a class="pill-link" href="#queens">Queens</a>
+          <a class="pill-link" href="#brooklyn">Brooklyn</a>
+          <a class="pill-link" href="#staten-island">Staten Island</a>
+          <a class="pill-link" href="#bundles">Bundles</a>
+        </div>
+      </div>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>House Roast</h2>
-        <p>Balanced, bold, everyday cup.</p>
-        <p class="price">$—</p>
-        <a class="btn" href="contact.html">Order / Inquire</a>
-      </article>
+    <!-- Shop All / Overview -->
+    <section class="section" aria-label="Shop all coffee">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Shop All</h2>
+          <p class="section-subtitle">Explore the full lineup of borough blends.</p>
+        </div>
 
-      <article class="card">
-        <h2>Dark Roast</h2>
-        <p>Heavy body, low nonsense.</p>
-        <p class="price">$—</p>
-        <a class="btn" href="contact.html">Order / Inquire</a>
-      </article>
+        <div class="grid-3">
+          <article class="card card-media">
+            <img src="assets/images/5-Borough-Coffee.png" alt="MT Mug five borough lineup" loading="lazy" />
+            <h3 style="padding-top:14px;">Five Borough Lineup</h3>
+            <p class="muted">All five blends — built for NYC coffee culture.</p>
+            <span class="text-link">Scroll to choose a borough ↓</span>
+          </article>
 
-      <article class="card">
-        <h2>Limited Drop</h2>
-        <p>Seasonal release — while it lasts.</p>
-        <p class="price">$—</p>
-        <a class="btn" href="contact.html">Get Notified</a>
-      </article>
+          <article class="card card-media">
+            <img src="assets/images/Fill-The-Mug.png" alt="Fill The Mug coffee" loading="lazy" />
+            <h3 style="padding-top:14px;">Fill The Mug</h3>
+            <p class="muted">A smooth daily driver for your routine.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <article class="card card-media">
+            <img src="assets/images/Beans-Roasted.png" alt="Roasted coffee beans" loading="lazy" />
+            <h3 style="padding-top:14px;">Limited Drops</h3>
+            <p class="muted">Seasonal releases. When it’s gone, it’s gone.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Get notified →</a>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="content-block">
-      <h2>Wholesale</h2>
-      <p>Cafés, barbershops, offices — we do recurring supply. Hit us through the contact page and we’ll set you up.</p>
-      <a class="btn" href="contact.html">Wholesale Inquiry</a>
+    <!-- Borough Sections -->
+    <section class="section" aria-label="Shop by borough">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Shop by Borough</h2>
+          <p class="section-subtitle">Click a borough from the map or jump links to land here.</p>
+        </div>
+
+        <div class="grid-3">
+
+          <!-- BRONX -->
+          <article class="card card-media" id="bronx">
+            <img src="assets/images/Bronx-Bag.png" alt="The Bronx blend bag" loading="lazy" />
+            <h3 style="padding-top:14px;">The Bronx</h3>
+            <p class="muted">Light roast. Bright, smooth, and easy to drink.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <!-- MANHATTAN -->
+          <article class="card card-media" id="manhattan">
+            <img src="assets/images/Manhattan-Bag.png" alt="Manhattan blend bag" loading="lazy" />
+            <h3 style="padding-top:14px;">Manhattan</h3>
+            <p class="muted">Medium roast. Balanced body with a clean finish.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <!-- QUEENS -->
+          <article class="card card-media" id="queens">
+            <img src="assets/images/Queens-Bag.png" alt="Queens blend bag" loading="lazy" />
+            <h3 style="padding-top:14px;">Queens</h3>
+            <p class="muted">Light roast. Smooth, crisp, and bright.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <!-- BROOKLYN -->
+          <article class="card card-media" id="brooklyn">
+            <img src="assets/images/Brooklyn-Bag.png" alt="Brooklyn blend bag" loading="lazy" />
+            <h3 style="padding-top:14px;">Brooklyn</h3>
+            <p class="muted">Medium roast. Comforting, warm, and classic.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <!-- STATEN ISLAND -->
+          <article class="card card-media" id="staten-island">
+            <img src="assets/images/Staten-Island-Bag.png" alt="Staten Island blend bag" loading="lazy" />
+            <h3 style="padding-top:14px;">Staten Island</h3>
+            <p class="muted">Dark roast. Bold body with a deep finish.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <!-- Optional: “Office Ritual” -->
+          <article class="card card-media">
+            <img src="assets/images/Coffee-At-Work.png" alt="Coffee at work" loading="lazy" />
+            <h3 style="padding-top:14px;">Office Ritual</h3>
+            <p class="muted">Built for the daily grind — desk-to-deadline fuel.</p>
+            <a class="text-link" href="culture.html" style="display:inline-block; padding-bottom:16px;">See the vibe →</a>
+          </article>
+
+        </div>
+      </div>
     </section>
+
+    <!-- Bundles -->
+    <section class="section" id="bundles" aria-label="Bundles">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Borough Bundles</h2>
+          <p class="section-subtitle">Stock up and save. Perfect for gifting or weekly refills.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card card-media">
+            <img src="assets/images/3-Borough-Bundle.png" alt="Three borough bundle" loading="lazy" />
+            <h3 style="padding-top:14px;">3-Borough Bundle</h3>
+            <p class="muted">Choose three blends and keep the rotation fresh.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <article class="card card-media">
+            <img src="assets/images/5-Borough-Coffee.png" alt="Five borough bundle" loading="lazy" />
+            <h3 style="padding-top:14px;">5-Borough Bundle</h3>
+            <p class="muted">The full NYC set — all five boroughs.</p>
+            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+          </article>
+
+          <article class="card card-media">
+            <img src="assets/images/Brew-Action.png" alt="Brewing" loading="lazy" />
+            <h3 style="padding-top:14px;">Brewing Help</h3>
+            <p class="muted">Want grind/brew guidance? We’ll help you dial it in.</p>
+            <a class="text-link" href="culture.html#brewing" style="display:inline-block; padding-bottom:16px;">Learn →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wholesale -->
+    <section class="section">
+      <div class="container cta-inner">
+        <div>
+          <h2>Wholesale</h2>
+          <p class="muted">Cafés, barbershops, offices — we do recurring supply. Hit us up and we’ll set you up.</p>
+        </div>
+        <a class="btn" href="contact.html">Wholesale Inquiry</a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="y"></span> MT Mug. All rights reserved.</p>
+      <p class="muted">© <span id="y"></span> MT Mug. All rights reserved.</p>
       <div class="footer-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" class="text-link">Privacy</a>
+        <a href="terms.html" class="text-link">Terms</a>
       </div>
     </div>
   </footer>
@@ -78,4 +209,3 @@
   </script>
 </body>
 </html>
-
