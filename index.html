@@ -9,13 +9,60 @@
 
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Map interaction styles (you can move this into assets/css/style.css later) -->
+  <style>
+    /* Make SVG links feel clickable */
+    .borough-link { cursor: pointer; }
+    .borough-link:focus { outline: none; }
+
+    /* Hover glow on the borough shapes */
+    .borough-shape{
+      transition: filter 160ms ease, transform 160ms ease, opacity 160ms ease;
+      transform-origin: center;
+    }
+    .borough-link:hover .borough-shape,
+    .borough-link:focus-visible .borough-shape{
+      filter:
+        drop-shadow(0 12px 18px rgba(0,0,0,0.18))
+        drop-shadow(0 0 10px rgba(154,107,47,0.35));
+      transform: translateY(-1px);
+      opacity: 1;
+    }
+
+    /* Labels should never block clicks */
+    .borough-label,
+    .borough-label *{
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Map container sizing */
+    .borough-map-wrap{
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .borough-map{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .map-hint{
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Simple Announcement Bar (light + friendly) -->
+  <!-- Announcement Bar -->
   <div class="announcement" role="region" aria-label="Announcement">
     <div class="container announcement-inner">
       <p class="announcement-text">Free shipping over $35 • Fresh drops and limited releases</p>
@@ -27,12 +74,7 @@
   <header class="site-header site-header--sticky">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="MT Mug Home">
-        <img
-          class="brand-logo"
-          src="assets/images/MT-Mug-Logo.png"
-          alt="MT Mug Coffee"
-          loading="eager"
-        />
+        <img class="brand-logo" src="assets/images/MT-Mug-Logo.png" alt="MT Mug Coffee" />
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
@@ -47,7 +89,7 @@
   <!-- Main -->
   <main id="main">
 
-    <!-- Hero (warm + visual) -->
+    <!-- Hero -->
     <section class="hero hero--light" aria-label="MT Mug hero">
       <div class="container hero-inner">
 
@@ -73,15 +115,15 @@
         <div class="hero-media" aria-label="Coffee lifestyle image">
           <img
             src="assets/images/Hero-Coffee.png"
-            alt="MT Mug Coffee lineup on a table with a warm, cozy vibe"
-            loading="eager"
+            alt="MT Mug coffee lineup with a warm cup of coffee"
+            loading="lazy"
           />
         </div>
 
       </div>
     </section>
 
-    <!-- Shop Paths (wired to your real images) -->
+    <!-- Shop Paths -->
     <section class="section section-paths" aria-label="Shop categories">
       <div class="container">
         <div class="section-head">
@@ -91,6 +133,7 @@
 
         <div class="grid-4">
           <a class="card card-link card-media" href="shop.html" aria-label="Shop all coffee">
+            <!-- FIXED: correct image filename -->
             <img src="assets/images/5-Borough-Coffee.png" alt="MT Mug five borough coffee lineup" loading="lazy" />
             <h3>Shop All</h3>
             <p class="muted">Explore the full lineup.</p>
@@ -98,21 +141,21 @@
           </a>
 
           <a class="card card-link card-media" href="shop.html#bundles" aria-label="Shop bundles">
-            <img src="assets/images/3-Borough-Bundle.png" alt="MT Mug three borough bundle" loading="lazy" />
+            <img src="assets/images/3-Borough-Bundle.png" alt="MT Mug borough bundle lineup" loading="lazy" />
             <h3>Borough Bundles</h3>
             <p class="muted">Save when you stock up.</p>
             <span class="text-link">Shop bundles →</span>
           </a>
 
-          <a class="card card-link card-media" href="about.html#routine" aria-label="Coffee at work routine">
-            <img src="assets/images/Coffee-At-Work.png" alt="Coffee at work scene with a laptop and a steaming mug" loading="lazy" />
+          <a class="card card-link card-media" href="culture.html" aria-label="Office ritual">
+            <img src="assets/images/Coffee-At-Work.png" alt="Coffee at a work desk with laptop" loading="lazy" />
             <h3>Office Ritual</h3>
             <p class="muted">Built for the daily grind.</p>
             <span class="text-link">See the vibe →</span>
           </a>
 
-          <a class="card card-link card-media" href="about.html#brewing" aria-label="Brewing and pour over">
-            <img src="assets/images/Brew-Action.png" alt="Pour over coffee brewing action" loading="lazy" />
+          <a class="card card-link card-media" href="culture.html#brewing" aria-label="Brewing guides">
+            <img src="assets/images/Brew-Action.png" alt="Pour-over brewing action" loading="lazy" />
             <h3>Brewing</h3>
             <p class="muted">Guides + methods that fit your setup.</p>
             <span class="text-link">Learn →</span>
@@ -121,49 +164,98 @@
       </div>
     </section>
 
-    <!-- Shop by Borough (map section) -->
-    <section class="section section-map" aria-label="Shop by borough">
+    <!-- Shop by Borough (Clickable SVG) -->
+    <section class="section section-map" aria-label="Shop by Borough">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Shop by Borough</h2>
-          <p class="section-subtitle">Pick your borough and find your blend.</p>
+          <p class="section-subtitle">Hover a borough to see it glow. Click to shop that blend.</p>
         </div>
 
         <div class="map-card">
-          <img
-            src="assets/images/Borough-Map.png"
-            alt="Map of New York City showing the five boroughs"
-            loading="lazy"
-          />
+          <div class="borough-map-wrap" aria-label="NYC borough map">
+            <!--
+              NOTE:
+              Replace the 5 <path d="..."> values below with YOUR actual SVG paths.
+              If your SVG already has the correct paths, just paste them in and keep the <a> wrappers + classes.
+            -->
+            <svg class="borough-map" viewBox="0 0 1024 1024" role="img" aria-label="Clickable NYC borough map" xmlns="http://www.w3.org/2000/svg">
 
-          <div class="map-actions" aria-label="Shop by borough links">
-            <a class="pill-link" href="shop.html#brooklyn">Brooklyn</a>
+              <!-- Staten Island -->
+              <a class="borough-link" href="shop.html#staten-island" aria-label="Shop Staten Island blend">
+                <g>
+                  <path class="borough-shape" fill="#2F8C7A" d="M120,690 C140,640 220,610 270,640 C300,660 290,740 240,770 C190,800 130,760 120,690 Z"></path>
+                  <text class="borough-label" x="185" y="710" font-size="28" font-weight="800" letter-spacing="2" fill="rgba(251,250,247,0.92)">STATEN ISLAND</text>
+                </g>
+              </a>
+
+              <!-- Brooklyn -->
+              <a class="borough-link" href="shop.html#brooklyn" aria-label="Shop Brooklyn blend">
+                <g>
+                  <path class="borough-shape" fill="#B65A3C" d="M405,590 C450,520 560,520 610,580 C655,635 600,720 520,735 C440,750 365,675 405,590 Z"></path>
+                  <text class="borough-label" x="455" y="635" font-size="34" font-weight="800" letter-spacing="3" fill="rgba(251,250,247,0.92)">BROOKLYN</text>
+                </g>
+              </a>
+
+              <!-- Queens -->
+              <a class="borough-link" href="shop.html#queens" aria-label="Shop Queens blend">
+                <g>
+                  <path class="borough-shape" fill="#6B8F2A" d="M610,520 C700,440 860,470 900,610 C930,720 840,820 720,790 C620,765 545,610 610,520 Z"></path>
+                  <text class="borough-label" x="700" y="640" font-size="34" font-weight="800" letter-spacing="3" fill="rgba(251,250,247,0.92)">QUEENS</text>
+                </g>
+              </a>
+
+              <!-- Manhattan -->
+              <a class="borough-link" href="shop.html#manhattan" aria-label="Shop Manhattan blend">
+                <g>
+                  <path class="borough-shape" fill="#1F4E79" d="M445,220 C490,220 510,300 505,380 C500,470 480,560 450,560 C420,560 420,470 430,380 C440,300 420,220 445,220 Z"></path>
+                  <text class="borough-label" x="430" y="410" font-size="22" font-weight="800" letter-spacing="3" fill="rgba(251,250,247,0.92)" transform="rotate(-90 430 410)">MANHATTAN</text>
+                </g>
+              </a>
+
+              <!-- The Bronx -->
+              <a class="borough-link" href="shop.html#bronx" aria-label="Shop The Bronx blend">
+                <g>
+                  <path class="borough-shape" fill="#D1A312" d="M520,190 C600,150 720,170 760,260 C790,330 730,390 640,380 C560,370 470,240 520,190 Z"></path>
+                  <text class="borough-label" x="585" y="275" font-size="26" font-weight="800" letter-spacing="3" fill="rgba(251,250,247,0.92)">THE BRONX</text>
+                </g>
+              </a>
+
+            </svg>
+
+            <p class="map-hint">Tip: You can also shop by clicking the borough buttons below.</p>
+          </div>
+
+          <!-- Backup buttons (good UX + accessibility) -->
+          <div class="map-actions" aria-label="Shop borough buttons">
+            <a class="pill-link" href="shop.html#bronx">The Bronx</a>
             <a class="pill-link" href="shop.html#manhattan">Manhattan</a>
             <a class="pill-link" href="shop.html#queens">Queens</a>
-            <a class="pill-link" href="shop.html#bronx">The Bronx</a>
+            <a class="pill-link" href="shop.html#brooklyn">Brooklyn</a>
             <a class="pill-link" href="shop.html#staten-island">Staten Island</a>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Featured (use a real bag image you already have) -->
+    <!-- Featured -->
     <section class="section section-featured" aria-label="Featured product">
       <div class="container featured-inner">
         <div class="featured-copy">
           <p class="tag">Featured</p>
-          <h2>The Five Borough Collection</h2>
-          <p class="muted">Five roasts. One city. Built for daily drinking and gifting.</p>
+          <h2>Fill The Mug</h2>
+          <p class="muted">A smooth daily driver built for your routine.</p>
           <div class="actions">
-            <a class="btn" href="shop.html">Shop the Collection</a>
-            <a class="btn btn-ghost" href="shop.html#bundles">View bundles</a>
+            <a class="btn" href="shop.html">Shop Featured</a>
+            <a class="btn btn-ghost" href="shop.html">View all blends</a>
           </div>
         </div>
 
         <div class="featured-media">
           <img
-            src="assets/images/5-Borough-Coffee.png"
-            alt="MT Mug Coffee five borough lineup"
+            src="assets/images/Fill-The-Mug.png"
+            alt="MT Mug featured coffee"
             loading="lazy"
           />
         </div>
@@ -193,8 +285,8 @@
       </div>
     </section>
 
-    <!-- CTA (optional beans background via CSS) -->
-    <section class="section section-cta section-cta--beans" aria-label="Email signup">
+    <!-- CTA (beans background optional if your CSS includes it) -->
+    <section class="section section-cta section-cta--beans">
       <div class="container cta-inner">
         <div>
           <h2>Get the drops.</h2>
