@@ -15,20 +15,11 @@
   <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Promo Bars (Stone Street style) -->
-  <div class="promo-bars" role="region" aria-label="Promotions">
-    <div class="promo-bar promo-bar--top">
-      <div class="container promo-inner">
-        <p class="promo-text">📱 Get the MT Mug app • 20% off your first order</p>
-        <a class="promo-link" href="shop.html" aria-label="Shop now">Shop now</a>
-      </div>
-    </div>
-
-    <div class="promo-bar promo-bar--bundle">
-      <div class="container promo-inner">
-        <p class="promo-text"><strong>3 PACK PROMO!</strong> 15% OFF 3+ BAGS • USE CODE <strong>BORO3</strong></p>
-        <a class="promo-link" href="shop.html" aria-label="Shop bundles">Shop bundles</a>
-      </div>
+  <!-- Simple Announcement Bar (light + friendly) -->
+  <div class="announcement" role="region" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <p class="announcement-text">Free shipping over $35 • Fresh drops and limited releases</p>
+      <a class="announcement-link" href="shop.html">Shop coffee</a>
     </div>
   </div>
 
@@ -36,9 +27,6 @@
   <header class="site-header site-header--sticky">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="MT Mug Home">
-        <!-- If you have a logo, use this:
-        <img src="assets/images/logo.png" alt="MT Mug logo" class="brand-logo" />
-        -->
         <span class="brand-mark">MT</span>
         <span class="brand-name">Mug</span>
       </a>
@@ -55,73 +43,73 @@
   <!-- Main -->
   <main id="main">
 
-    <!-- Hero (Promo-forward) -->
-    <section class="hero hero--promo" aria-label="Featured promotion">
+    <!-- Hero (warm + visual) -->
+    <section class="hero hero--light" aria-label="MT Mug hero">
       <div class="container hero-inner">
 
         <div class="hero-copy">
           <p class="eyebrow">Coffee is ritual.</p>
           <h1>MT Mug — Coffee & Culture</h1>
           <p class="lead">
-            Crafted for early mornings, late nights, and everything in between.
+            Premium coffee built for the borough grind — early mornings, late nights, and everything in between.
           </p>
 
-          <div class="hero-offer" aria-label="Current offer">
-            <p class="hero-offer-title">BOROUGH BUNDLE DEAL</p>
-            <p class="hero-offer-main">15% OFF 3+ BAGS</p>
-            <p class="hero-offer-code">USE CODE: <strong>BORO3</strong></p>
+          <div class="actions">
+            <a class="btn" href="shop.html">Shop Coffee</a>
+            <a class="btn btn-ghost" href="about.html">Our Story</a>
           </div>
 
-          <div class="actions">
-            <a class="btn" href="shop.html">Shop Bundles</a>
-            <a class="btn btn-ghost" href="shop.html">Shop All Coffee</a>
+          <div class="hero-notes" aria-label="Quick highlights">
+            <span class="pill">Small-batch mindset</span>
+            <span class="pill">Smooth, balanced roasts</span>
+            <span class="pill">Culture-driven brand</span>
           </div>
         </div>
 
-        <!-- Right-side: keep your featured product card -->
-        <div class="hero-card" aria-label="Featured product">
-          <div class="hero-card-top">
-            <p class="tag">Featured</p>
-            <h2 class="h3">Borough Blend</h2>
-            <p class="muted">Smooth. Bold. Balanced.</p>
-          </div>
-          <div class="hero-card-bottom">
-            <p class="price">From $17.99</p>
-            <a class="text-link" href="shop.html">View details →</a>
-          </div>
+        <!-- Hero image (replace src with your photo) -->
+        <div class="hero-media" aria-label="Coffee lifestyle image">
+          <img
+            src="assets/images/hero-coffee.jpg"
+            alt="A warm cup of coffee on a table"
+            loading="lazy"
+          />
         </div>
 
       </div>
     </section>
 
-    <!-- Shop Paths (Stone Street style) -->
+    <!-- Shop Paths (now with images) -->
     <section class="section section-paths" aria-label="Shop categories">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Shop your way.</h2>
-          <p class="section-subtitle">Pick a lane: blends, bundles, gifts, or brew gear.</p>
+          <p class="section-subtitle">Find your daily blend, stock up, or grab a gift.</p>
         </div>
 
         <div class="grid-4">
-          <a class="card card-link" href="shop.html" aria-label="Shop all coffee">
+          <a class="card card-link card-media" href="shop.html" aria-label="Shop all coffee">
+            <img src="assets/images/category-all.jpg" alt="" loading="lazy" />
             <h3>Shop All</h3>
             <p class="muted">Explore the full lineup.</p>
             <span class="text-link">Browse →</span>
           </a>
 
-          <a class="card card-link" href="shop.html" aria-label="Shop bundles">
+          <a class="card card-link card-media" href="shop.html" aria-label="Shop bundles">
+            <img src="assets/images/category-bundles.jpg" alt="" loading="lazy" />
             <h3>Borough Bundles</h3>
             <p class="muted">Save when you stock up.</p>
-            <span class="text-link">Build a 3-Pack →</span>
+            <span class="text-link">Shop bundles →</span>
           </a>
 
-          <a class="card card-link" href="shop.html" aria-label="Shop gifts">
+          <a class="card card-link card-media" href="shop.html" aria-label="Shop gifts">
+            <img src="assets/images/category-gifts.jpg" alt="" loading="lazy" />
             <h3>Gifts</h3>
             <p class="muted">Boxes, cards, and essentials.</p>
             <span class="text-link">Gift it →</span>
           </a>
 
-          <a class="card card-link" href="shop.html" aria-label="Brewing guides">
+          <a class="card card-link card-media" href="shop.html" aria-label="Brewing guides">
+            <img src="assets/images/category-brewing.jpg" alt="" loading="lazy" />
             <h3>Brewing</h3>
             <p class="muted">Guides + gear for your setup.</p>
             <span class="text-link">Learn →</span>
@@ -130,22 +118,25 @@
       </div>
     </section>
 
-    <!-- Bundles Feature Band -->
-    <section class="section section-bundles" aria-label="Bundle promotion">
-      <div class="container bundles-inner">
-        <div class="bundles-copy">
-          <p class="tag">Limited-time</p>
-          <h2>Bundle up like a borough local.</h2>
-          <p class="muted">
-            Grab 3+ bags and save 15%. Perfect for home, office, and the commute.
-          </p>
-        </div>
-        <div class="bundles-cta">
-          <div class="code-box" aria-label="Discount code">
-            <span>USE CODE</span>
-            <strong>BORO3</strong>
+    <!-- Featured (lighter alternative to hard promo) -->
+    <section class="section section-featured" aria-label="Featured product">
+      <div class="container featured-inner">
+        <div class="featured-copy">
+          <p class="tag">Featured</p>
+          <h2>Borough Blend</h2>
+          <p class="muted">Smooth, bold, and balanced — built for daily drinking.</p>
+          <div class="actions">
+            <a class="btn" href="shop.html">Shop Borough Blend</a>
+            <a class="btn btn-ghost" href="shop.html">View all blends</a>
           </div>
-          <a class="btn" href="shop.html">Build a 3-Pack</a>
+        </div>
+
+        <div class="featured-media">
+          <img
+            src="assets/images/featured-bag.jpg"
+            alt="MT Mug Borough Blend coffee bag"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
