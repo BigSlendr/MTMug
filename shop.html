@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop | MT Mug</title>
   <meta name="description" content="Shop MT Mug coffee, bundles, and borough blends." />
-  <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Favicons (optional, but recommended if you created these files) -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header (match your index header style/classes) -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="MT Mug Home">
@@ -42,23 +47,24 @@
         </div>
 
         <!-- Quick jump pills -->
-        <div class="hero-notes" aria-label="Jump to borough">
+        <div class="hero-notes" aria-label="Jump to borough or bundles">
           <a class="pill-link" href="#bronx">The Bronx</a>
           <a class="pill-link" href="#manhattan">Manhattan</a>
           <a class="pill-link" href="#queens">Queens</a>
           <a class="pill-link" href="#brooklyn">Brooklyn</a>
-          <a class="pill-link" href="#staten-island">Staten Island</a>
+          <a class="pill-link" href="#statenisland">Staten Island</a>
           <a class="pill-link" href="#bundles">Bundles</a>
+          <a class="pill-link" href="#wholesale">Wholesale</a>
         </div>
       </div>
     </section>
 
-    <!-- Shop All / Overview -->
-    <section class="section" aria-label="Shop all coffee">
+    <!-- Shop Overview -->
+    <section class="section" aria-label="Shop overview">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title">Shop All</h2>
-          <p class="section-subtitle">Explore the full lineup of borough blends.</p>
+          <h2 class="section-title">Start here.</h2>
+          <p class="section-subtitle">Shop the lineup, grab a bundle, or scroll straight to your borough.</p>
         </div>
 
         <div class="grid-3">
@@ -66,7 +72,7 @@
             <img src="assets/images/5-Borough-Coffee.png" alt="MT Mug five borough lineup" loading="lazy" />
             <h3 style="padding-top:14px;">Five Borough Lineup</h3>
             <p class="muted">All five blends — built for NYC coffee culture.</p>
-            <span class="text-link">Scroll to choose a borough ↓</span>
+            <a class="text-link" href="#boroughs" style="display:inline-block; padding-bottom:16px;">Shop by borough ↓</a>
           </article>
 
           <article class="card card-media">
@@ -86,12 +92,12 @@
       </div>
     </section>
 
-    <!-- Borough Sections -->
-    <section class="section" aria-label="Shop by borough">
+    <!-- Borough Grid -->
+    <section id="boroughs" class="section" aria-label="Shop by borough">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Shop by Borough</h2>
-          <p class="section-subtitle">Click a borough from the map or jump links to land here.</p>
+          <p class="section-subtitle">Each blend is inspired by NYC energy. Click to order or inquire.</p>
         </div>
 
         <div class="grid-3">
@@ -101,7 +107,9 @@
             <img src="assets/images/Bronx-Bag.png" alt="The Bronx blend bag" loading="lazy" />
             <h3 style="padding-top:14px;">The Bronx</h3>
             <p class="muted">Light roast. Bright, smooth, and easy to drink.</p>
-            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn" href="contact.html">Order / Inquire</a>
+            </div>
           </article>
 
           <!-- MANHATTAN -->
@@ -109,7 +117,9 @@
             <img src="assets/images/Manhattan-Bag.png" alt="Manhattan blend bag" loading="lazy" />
             <h3 style="padding-top:14px;">Manhattan</h3>
             <p class="muted">Medium roast. Balanced body with a clean finish.</p>
-            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn" href="contact.html">Order / Inquire</a>
+            </div>
           </article>
 
           <!-- QUEENS -->
@@ -117,7 +127,9 @@
             <img src="assets/images/Queens-Bag.png" alt="Queens blend bag" loading="lazy" />
             <h3 style="padding-top:14px;">Queens</h3>
             <p class="muted">Light roast. Smooth, crisp, and bright.</p>
-            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn" href="contact.html">Order / Inquire</a>
+            </div>
           </article>
 
           <!-- BROOKLYN -->
@@ -125,23 +137,29 @@
             <img src="assets/images/Brooklyn-Bag.png" alt="Brooklyn blend bag" loading="lazy" />
             <h3 style="padding-top:14px;">Brooklyn</h3>
             <p class="muted">Medium roast. Comforting, warm, and classic.</p>
-            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn" href="contact.html">Order / Inquire</a>
+            </div>
           </article>
 
-          <!-- STATEN ISLAND -->
-          <article class="card card-media" id="staten-island">
+          <!-- STATEN ISLAND (ID matches your map JS: #statenisland) -->
+          <article class="card card-media" id="statenisland">
             <img src="assets/images/Staten-Island-Bag.png" alt="Staten Island blend bag" loading="lazy" />
             <h3 style="padding-top:14px;">Staten Island</h3>
             <p class="muted">Dark roast. Bold body with a deep finish.</p>
-            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn" href="contact.html">Order / Inquire</a>
+            </div>
           </article>
 
-          <!-- Optional: “Office Ritual” -->
+          <!-- Lifestyle Card -->
           <article class="card card-media">
             <img src="assets/images/Coffee-At-Work.png" alt="Coffee at work" loading="lazy" />
             <h3 style="padding-top:14px;">Office Ritual</h3>
-            <p class="muted">Built for the daily grind — desk-to-deadline fuel.</p>
-            <a class="text-link" href="culture.html" style="display:inline-block; padding-bottom:16px;">See the vibe →</a>
+            <p class="muted">Desk-to-deadline fuel. Built for the daily grind.</p>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn btn-ghost" href="culture.html">Explore culture</a>
+            </div>
           </article>
 
         </div>
@@ -161,28 +179,34 @@
             <img src="assets/images/3-Borough-Bundle.png" alt="Three borough bundle" loading="lazy" />
             <h3 style="padding-top:14px;">3-Borough Bundle</h3>
             <p class="muted">Choose three blends and keep the rotation fresh.</p>
-            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn" href="contact.html">Order / Inquire</a>
+            </div>
           </article>
 
           <article class="card card-media">
             <img src="assets/images/5-Borough-Coffee.png" alt="Five borough bundle" loading="lazy" />
             <h3 style="padding-top:14px;">5-Borough Bundle</h3>
             <p class="muted">The full NYC set — all five boroughs.</p>
-            <a class="text-link" href="contact.html" style="display:inline-block; padding-bottom:16px;">Order / Inquire →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn" href="contact.html">Order / Inquire</a>
+            </div>
           </article>
 
           <article class="card card-media">
-            <img src="assets/images/Brew-Action.png" alt="Brewing" loading="lazy" />
+            <img src="assets/images/Brew-Action.png" alt="Brewing coffee" loading="lazy" />
             <h3 style="padding-top:14px;">Brewing Help</h3>
             <p class="muted">Want grind/brew guidance? We’ll help you dial it in.</p>
-            <a class="text-link" href="culture.html#brewing" style="display:inline-block; padding-bottom:16px;">Learn →</a>
+            <div style="padding: 0 18px 16px;">
+              <a class="btn btn-ghost" href="culture.html#brewing">Learn</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- Wholesale -->
-    <section class="section">
+    <section class="section" id="wholesale" aria-label="Wholesale">
       <div class="container cta-inner">
         <div>
           <h2>Wholesale</h2>
