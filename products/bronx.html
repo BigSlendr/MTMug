@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Bronx | MT Mug</title>
+  <meta name="description" content="The Bronx blend by MT Mug Coffee." />
+
+  <link rel="icon" type="image/png" href="../assets/images/MT-Man-Logo.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="MT Mug Home">
+        <img class="brand-logo" src="../assets/images/MT-Mug-Logo.png" alt="MT Mug Coffee" />
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../about.html">About</a>
+        <a class="nav-link active" href="../shop.html">Shop</a>
+        <a class="nav-link" href="../culture.html">Culture</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================
+         PRODUCT CONFIG
+         Change these values per page
+    ========================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <p class="eyebrow">Borough Blend</p>
+          <h1 class="section-title" style="font-size:42px;">The Bronx</h1>
+          <p class="section-subtitle">
+            Light roast. Bright, smooth, and easy to drink — built for the borough grind.
+          </p>
+        </div>
+
+        <div class="featured-inner" style="grid-template-columns: 1.1fr 0.9fr;">
+          <!-- Left: info -->
+          <div class="card" style="padding:22px;">
+            <div class="tag">Blend Details</div>
+
+            <div class="grid-3" style="grid-template-columns: 1fr 1fr 1fr;">
+              <div>
+                <p class="muted" style="margin:0; font-weight:800;">Roast</p>
+                <p style="margin:6px 0 0;">Light</p>
+              </div>
+              <div>
+                <p class="muted" style="margin:0; font-weight:800;">Notes</p>
+                <p style="margin:6px 0 0;">Bright, smooth</p>
+              </div>
+              <div>
+                <p class="muted" style="margin:0; font-weight:800;">Best For</p>
+                <p style="margin:6px 0 0;">Daily cup</p>
+              </div>
+            </div>
+
+            <hr style="border:none; border-top:1px solid var(--line); margin:18px 0;">
+
+            <h2 style="margin:0 0 8px;">How to order</h2>
+            <p class="muted" style="margin:0 0 14px; line-height:1.6;">
+              We’re keeping it simple while the store is being built. Click below to inquire and we’ll confirm pricing,
+              availability, and delivery/pickup.
+            </p>
+
+            <div class="actions">
+              <a class="btn" href="../contact.html?product=The%20Bronx">Order / Inquire</a>
+              <a class="btn btn-ghost" href="../shop.html#map">Back to Map</a>
+            </div>
+
+            <div class="hero-notes" style="margin-top:16px;">
+              <span class="pill">Small-batch mindset</span>
+              <span class="pill">Fresh drops</span>
+              <span class="pill">NYC culture</span>
+            </div>
+          </div>
+
+          <!-- Right: product image -->
+          <div class="featured-media">
+            <img src="../assets/images/Bronx-Bag.png" alt="The Bronx coffee bag" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lifestyle / secondary content -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-3">
+          <article class="card card-media">
+            <img src="../assets/images/Coffee-At-Work.png" alt="Coffee at work" loading="lazy">
+            <h3 style="padding-top:14px;">Office Ritual</h3>
+            <p class="muted">Built for desk-to-deadline fuel.</p>
+            <span class="text-link" style="display:inline-block; padding-bottom:16px;">Pairs well with the grind.</span>
+          </article>
+
+          <article class="card card-media">
+            <img src="../assets/images/Brew-Action.png" alt="Brewing coffee" loading="lazy">
+            <h3 style="padding-top:14px;">Brew tips</h3>
+            <p class="muted">Want grind + method help? We’ll guide you.</p>
+            <a class="text-link" href="../culture.html#brewing" style="display:inline-block; padding-bottom:16px;">Learn →</a>
+          </article>
+
+          <article class="card card-media">
+            <img src="../assets/images/Beans-Roasted.png" alt="Roasted coffee beans" loading="lazy">
+            <h3 style="padding-top:14px;">Limited drops</h3>
+            <p class="muted">Seasonal releases rotate.</p>
+            <a class="text-link" href="../contact.html" style="display:inline-block; padding-bottom:16px;">Get notified →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="y"></span> MT Mug. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="../privacy.html" class="text-link">Privacy</a>
+        <a href="../terms.html" class="text-link">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
