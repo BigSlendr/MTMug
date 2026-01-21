@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Culture | MT Mug</title>
-  <meta name="description" content="The culture behind MT Mug: ritual, craft, and city energy." />
+  <meta name="description" content="MT Mug culture, rituals, and brewing guides for every setup." />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -15,50 +15,250 @@
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="MT Mug Home">
         <span class="brand-mark">MT</span>
+        <span class="brand-name">Mug</span>
       </a>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="shop.html">Shop</a>
-        <a href="culture.html" aria-current="page">Culture</a>
-        <a href="contact.html">Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link active" href="culture.html" aria-current="page">Culture</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="page-hero">
-      <h1>Coffee & Culture</h1>
-      <p>MT Mug is built for people who build. The brand is a reminder: protect your ritual.</p>
+  <main id="main">
+    <section class="section section-featured" aria-label="Culture hero">
+      <div class="container featured-inner">
+        <div class="featured-copy">
+          <p class="tag">Culture</p>
+          <h1>Coffee culture for builders.</h1>
+          <p class="muted">
+            MT Mug is built for early call times, creative sprints, and late-night edits. Protect the ritual,
+            and the city keeps moving.
+          </p>
+          <div class="actions">
+            <a class="btn" href="shop.html">Shop coffee</a>
+            <a class="btn btn-ghost" href="#brewing">Brewing guides</a>
+          </div>
+          <div class="hero-notes" aria-label="Culture highlights">
+            <span class="pill">Ritual over hype</span>
+            <span class="pill">Borough-inspired blends</span>
+            <span class="pill">Small-batch mindset</span>
+          </div>
+        </div>
+
+        <div class="featured-media">
+          <img
+            src="assets/images/Coffee-At-Work.png"
+            alt="Coffee on a desk at work"
+            loading="eager"
+          />
+        </div>
+      </div>
     </section>
 
-    <section class="content-block">
-      <h2>The Ritual</h2>
-      <ol>
-        <li>Wake up.</li>
-        <li>Make the cup.</li>
-        <li>Move with intention.</li>
-      </ol>
+    <section class="section" id="rituals" aria-label="The ritual">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">The ritual</h2>
+          <p class="section-subtitle">Daily steps that turn a cup into momentum.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Wake</h3>
+            <p class="muted">Light, water, and a quick reset before the day starts moving.</p>
+          </article>
+          <article class="card">
+            <h3>Brew</h3>
+            <p class="muted">Dial in your method, trust the process, and let the aroma do its work.</p>
+          </article>
+          <article class="card">
+            <h3>Move</h3>
+            <p class="muted">Step into the day with intention. The ritual is your edge.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="content-block">
-      <h2>The City Energy</h2>
-      <p>NYC isn’t just a backdrop — it’s the tempo. Fast mornings, late nights, and a thousand reasons to keep going.</p>
+    <section class="section section-featured" aria-label="City energy">
+      <div class="container featured-inner">
+        <div class="featured-copy">
+          <p class="tag">City Energy</p>
+          <h2>New York sets the tempo.</h2>
+          <p class="muted">
+            NYC is not just a backdrop - it is the cadence. Fast mornings, late nights,
+            and a thousand reasons to keep going.
+          </p>
+          <div class="actions">
+            <a class="btn btn-ghost" href="shop.html#boroughs">Shop the boroughs</a>
+          </div>
+        </div>
+
+        <div class="featured-media">
+          <img
+            src="assets/images/Borough-Map.png"
+            alt="Map of New York City boroughs"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </section>
 
-    <section class="content-block">
-      <h2>Drops & Collabs</h2>
-      <p>Limited releases, artist collabs, and location-inspired blends. We’re building a world, not just a product line.</p>
+    <section class="section" aria-label="Brew basics">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Brew basics</h2>
+          <p class="section-subtitle">Use this cheat sheet to stay consistent across every setup.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Ratio</h3>
+            <p class="muted">Start at 1:16 and adjust to taste.</p>
+            <p class="muted"><strong>Example:</strong> 20g coffee to 320g water.</p>
+          </article>
+          <article class="card">
+            <h3>Water</h3>
+            <p class="muted">Use filtered water at 195-205F.</p>
+            <p class="muted"><strong>Tip:</strong> boil, then rest 45 seconds.</p>
+          </article>
+          <article class="card">
+            <h3>Grind</h3>
+            <p class="muted">Match grind size to method for even extraction.</p>
+            <p class="muted"><strong>Guide:</strong> fine for espresso, medium for drip, coarse for press.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="brewing" class="section" aria-label="Brewing guides">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Brewing guides</h2>
+          <p class="section-subtitle">Choose your method and follow the steps.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Pour-over</h3>
+            <p class="muted">Clean, bright cup for lighter roasts.</p>
+            <ol class="muted">
+              <li>Rinse the filter and warm the brewer.</li>
+              <li>Add 20g coffee and bloom with 40g water for 30 seconds.</li>
+              <li>Pour to 320g total by 2:30, then let draw down.</li>
+            </ol>
+            <p class="muted"><strong>Grind:</strong> medium-fine.</p>
+          </article>
+
+          <article class="card">
+            <h3>French press</h3>
+            <p class="muted">Full body and rich texture.</p>
+            <ol class="muted">
+              <li>Add 30g coarse coffee to the press.</li>
+              <li>Pour 480g water, stir, and steep for 4 minutes.</li>
+              <li>Plunge slowly and serve immediately.</li>
+            </ol>
+            <p class="muted"><strong>Grind:</strong> coarse.</p>
+          </article>
+
+          <article class="card">
+            <h3>AeroPress</h3>
+            <p class="muted">Fast, smooth, and travel-friendly.</p>
+            <ol class="muted">
+              <li>Rinse filter, add 16g coffee, and start the timer.</li>
+              <li>Pour to 220g, stir for 10 seconds, steep to 1:30.</li>
+              <li>Press slowly for 30 seconds.</li>
+            </ol>
+            <p class="muted"><strong>Grind:</strong> fine-medium.</p>
+          </article>
+
+          <article class="card">
+            <h3>Cold brew</h3>
+            <p class="muted">Smooth, low-acid concentrate.</p>
+            <ol class="muted">
+              <li>Combine 100g coarse coffee with 800g water.</li>
+              <li>Steep 12-16 hours in the fridge.</li>
+              <li>Strain and dilute 1:1 over ice.</li>
+            </ol>
+            <p class="muted"><strong>Grind:</strong> coarse.</p>
+          </article>
+
+          <article class="card">
+            <h3>Drip machine</h3>
+            <p class="muted">Reliable for daily volume.</p>
+            <ol class="muted">
+              <li>Use 24g coffee to 380g water.</li>
+              <li>Rinse the filter, then start the brew.</li>
+              <li>Let it finish and keep the pot clean.</li>
+            </ol>
+            <p class="muted"><strong>Grind:</strong> medium.</p>
+          </article>
+
+          <article class="card">
+            <h3>Espresso</h3>
+            <p class="muted">Bold and concentrated.</p>
+            <ol class="muted">
+              <li>Dose 18g coffee, distribute, and tamp level.</li>
+              <li>Pull 36g out in 25-30 seconds.</li>
+              <li>Adjust grind until the flow looks steady.</li>
+            </ol>
+            <p class="muted"><strong>Grind:</strong> fine.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Drops and collabs">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Drops and collabs</h2>
+          <p class="section-subtitle">Limited releases, artist collabs, and neighborhood stories.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card card-media">
+            <img src="assets/images/Beans-Roasted.png" alt="Roasted coffee beans" loading="lazy" />
+            <h3>Small-batch roasting</h3>
+            <p class="muted">Dialed profiles that stay clean and balanced.</p>
+          </article>
+          <article class="card card-media">
+            <img src="assets/images/Brew-Action.png" alt="Brewing coffee in action" loading="lazy" />
+            <h3>Artist collabs</h3>
+            <p class="muted">Limited drops tied to neighborhoods and moments.</p>
+          </article>
+          <article class="card card-media">
+            <img src="assets/images/Fill-The-Mug.png" alt="Coffee being poured into a mug" loading="lazy" />
+            <h3>Fill the mug</h3>
+            <p class="muted">The daily driver that keeps you moving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta section-cta--beans" aria-label="Join the ritual">
+      <div class="container cta-inner">
+        <div>
+          <h2>Join the ritual.</h2>
+          <p class="muted">Brewing tips, new drops, and early access.</p>
+        </div>
+        <form class="cta-form" onsubmit="return false;">
+          <label class="sr-only" for="culture-email">Email</label>
+          <input id="culture-email" type="email" placeholder="you@email.com" />
+          <button class="btn" type="button">Subscribe</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="y"></span> MT Mug. All rights reserved.</p>
+      <p class="muted">(c) <span id="y"></span> MT Mug. All rights reserved.</p>
       <div class="footer-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" class="text-link">Privacy</a>
+        <a href="terms.html" class="text-link">Terms</a>
       </div>
     </div>
   </footer>
