@@ -54,43 +54,59 @@ img{max-width:100%;display:block}
   white-space:nowrap;border:0;
 }
 
-/* Announcement bar */
-.announcement{
+/* Trust bar */
+.trust-bar{
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.announcement-inner{
+.trust-bar-inner{
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  padding:10px 0;
+  justify-content:center;
+  padding:8px 0;
 }
-.announcement-text{
+.trust-list{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
   margin:0;
-  font-size:14px;
+  padding:0;
+  list-style:none;
+  font-size:13px;
+  font-weight:700;
   color:var(--muted);
 }
-.announcement-link{
-  font-weight:700;
-  color: var(--accent);
+.trust-list li{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
 }
-.announcement-link:hover{text-decoration:underline}
+.trust-list .dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background: var(--accent);
+  display:inline-block;
+}
 
 /* Header */
 .site-header{
   position:sticky;
   top:0;
   z-index:50;
-  background: rgba(251,250,247,0.78);
-  backdrop-filter: blur(12px);
-  border-bottom:1px solid var(--line);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
 }
 .header-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px;
   padding:14px 0;
 }
 
@@ -120,6 +136,18 @@ img{max-width:100%;display:block}
   display:flex;
   gap:12px;
   align-items:center;
+}
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-left:auto;
+}
+.header-actions .btn{
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:800;
+  box-shadow:none;
 }
 .nav-link{
   color: var(--muted);
@@ -166,6 +194,36 @@ h1{
   line-height:1.65;
 }
 .actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Hero trust row */
+.trust-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:16px 0 0;
+  padding:0;
+  list-style:none;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+}
+.trust-row li{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.trust-icon{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  color:var(--accent);
+  background: rgba(154,107,47,0.12);
+  border:1px solid rgba(154,107,47,0.25);
+}
 
 /* Pills under hero copy */
 .hero-notes{
@@ -224,6 +282,22 @@ h1{
   color: var(--text);
   box-shadow:none;
 }
+.btn-primary{
+  background:#111;
+  color:#fff;
+  border:1px solid #111;
+}
+.btn-secondary{
+  background:#fff;
+  color:#111;
+  border:1px solid rgba(0,0,0,0.14);
+}
+.btn-sm{
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:13px;
+  box-shadow:none;
+}
 
 /* Tags + text links */
 .tag{
@@ -241,6 +315,18 @@ h1{
 .muted{color:var(--muted)}
 .text-link{color:var(--accent); font-weight:700}
 .text-link:hover{text-decoration:underline}
+
+/* Focus styles */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.pill-link:focus-visible,
+.card-link:focus-visible,
+input:focus-visible,
+button:focus-visible,
+.header-actions .btn:focus-visible{
+  outline:2px solid var(--accent-2);
+  outline-offset:2px;
+}
 
 /* Sections */
 .section{padding:34px 0}
@@ -278,6 +364,32 @@ h1{
 .card-link:hover{
   transform: translateY(-2px);
   box-shadow: 0 16px 34px rgba(0,0,0,0.08);
+}
+
+/* Best sellers */
+.product-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.product-card img{
+  width:100%;
+  height:220px;
+  object-fit:contain;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,0.9);
+}
+.product-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:auto;
+}
+.price{
+  font-weight:800;
+  font-size:16px;
 }
 
 /* Cards with images */
@@ -353,6 +465,28 @@ input{
 input:focus{
   border-color: rgba(154,107,47,0.35);
 }
+.form-helper{
+  margin:0;
+  flex-basis:100%;
+  font-size:12px;
+  color:var(--muted);
+}
+.form-helper.form-offer{
+  font-weight:700;
+  color: rgba(21,21,21,0.86);
+}
+
+/* Routine CTA */
+.routine-cta{
+  background: rgba(21,21,21,0.04);
+  border:1px solid var(--line);
+}
+.cta-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
 
 /* Footer */
 .site-footer{
@@ -379,7 +513,7 @@ input:focus{
 }
 @media (max-width: 560px){
   .grid-4{grid-template-columns:1fr}
-  .announcement-inner{flex-direction:column; align-items:flex-start}
+  .trust-bar-inner{justify-content:flex-start}
 }
 
 /* =========================
@@ -395,31 +529,35 @@ input:focus{
 }
 
 /* =========================
-   Shop by Borough (map section)
+   Shop by Borough (cards)
 ========================= */
-.section-map .map-card{
-  background: rgba(255,255,255,0.85);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.06);
+.borough-grid{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:14px;
 }
-
-.section-map .map-card img{
-  width: 100%;
-  height: auto;
-  display:block;
-}
-
-.map-actions{
+.borough-card{
   display:flex;
-  flex-wrap:wrap;
+  flex-direction:column;
   gap:10px;
+  min-height:44px;
   padding:16px;
-  border-top: 1px solid var(--line);
-  background: rgba(255,255,255,0.75);
 }
-
+.borough-card img{
+  width:100%;
+  height:180px;
+  object-fit:contain;
+  border-radius:14px;
+  background: rgba(255,255,255,0.9);
+  border:1px solid var(--line);
+}
+.borough-card h3{
+  margin:0;
+  font-size:16px;
+}
+.borough-card .muted{
+  font-size:13px;
+}
 .pill-link{
   display:inline-flex;
   align-items:center;
@@ -463,7 +601,13 @@ input:focus{
 }
 
 /* Small polish: better nav on mobile */
+@media (max-width: 980px){
+  .borough-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 560px){
   .nav{ gap: 6px; flex-wrap: wrap; justify-content:flex-end; }
   .nav-link{ padding: 8px 10px; }
+  .header-actions{ width:100%; justify-content:flex-start; margin-left:0; }
+  .borough-grid{ grid-template-columns: 1fr; }
 }
