@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MT Mug | Coffee & Culture</title>
-  <meta name="description" content="MT Mug is a premium coffee brand. Built on ritual, culture, and craft." />
+  <title>MT Mug | Coffee &amp; Culture</title>
+  <meta name="description" content="MT Mug &mdash; Coffee &amp; Culture. Premium coffee for the borough grind. Shop five borough blends, bundles, brewing kits and merch." />
 
   <!-- Favicons (use your MT-Man-Logo exports in /assets/) -->
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
+  <link rel="preload" as="image" href="assets/images/Hero-Coffee.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -19,16 +20,19 @@
   <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Announcement Bar -->
-  <div class="announcement" role="region" aria-label="Announcement">
-    <div class="container announcement-inner">
-      <p class="announcement-text">Free shipping over $35 • Fresh drops and limited releases</p>
-      <a class="announcement-link" href="shop.html">Shop coffee</a>
+  <!-- Trust Bar -->
+  <div class="trust-bar" role="region" aria-label="Trust bar">
+    <div class="container trust-bar-inner">
+      <ul class="trust-list">
+        <li><span class="dot" aria-hidden="true"></span>Free shipping over $35</li>
+        <li><span class="dot" aria-hidden="true"></span>Fresh drops and limited releases</li>
+        <li><span class="dot" aria-hidden="true"></span>Small-batch mindset</li>
+      </ul>
     </div>
   </div>
 
   <!-- Site Header -->
-  <header class="site-header site-header--sticky">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="MT Mug Home">
         <!-- Optional: swap to logo image later -->
@@ -38,12 +42,17 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link active" href="index.html" aria-current="page">Home</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="shop.html">Shop</a>
         <a class="nav-link" href="culture.html">Culture</a>
         <a class="nav-link" href="contact.html">Contact</a>
       </nav>
+
+      <div class="header-actions" aria-label="Header actions">
+        <a class="btn btn-primary" href="shop.html">Shop Coffee</a>
+        <a class="btn btn-secondary" href="index.html#shop-your-way">Borough Bundles</a>
+      </div>
     </div>
   </header>
 
@@ -56,28 +65,33 @@
 
         <div class="hero-copy">
           <p class="eyebrow">Coffee is ritual.</p>
-          <h1>MT Mug — Coffee &amp; Culture</h1>
+          <h1>MT Mug &mdash; Coffee &amp; Culture</h1>
           <p class="lead">
-            Premium coffee built for the borough grind — early mornings, late nights, and everything in between.
+            Premium coffee built for the borough grind &mdash; early mornings, late nights, and everything in between.
           </p>
 
           <div class="actions">
             <a class="btn" href="shop.html">Shop Coffee</a>
             <a class="btn btn-ghost" href="about.html">Our Story</a>
+            <a class="btn btn-ghost" href="#boroughs">Shop by Borough</a>
           </div>
 
-          <div class="hero-notes" aria-label="Quick highlights">
-            <span class="pill">Small-batch mindset</span>
-            <span class="pill">Smooth, balanced roasts</span>
-            <span class="pill">Culture-driven brand</span>
-          </div>
+          <ul class="trust-row" aria-label="Quick trust highlights">
+            <li><span class="trust-icon" aria-hidden="true">&#10003;</span>Roasted to order</li>
+            <li><span class="trust-icon" aria-hidden="true">&#10003;</span>Free shipping $35+</li>
+            <li><span class="trust-icon" aria-hidden="true">&#10003;</span>Limited drops</li>
+          </ul>
         </div>
 
         <div class="hero-media" aria-label="Coffee lifestyle image">
           <img
             src="assets/images/Hero-Coffee.png"
             alt="MT Mug coffee scene"
+            width="1536"
+            height="1024"
             loading="eager"
+            decoding="async"
+            fetchpriority="high"
           />
         </div>
 
@@ -85,7 +99,7 @@
     </section>
 
     <!-- Shop Paths -->
-    <section class="section section-paths" aria-label="Shop categories">
+    <section class="section section-paths" id="shop-your-way" aria-label="Shop categories">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Shop your way.</h2>
@@ -94,33 +108,48 @@
 
         <div class="grid-4">
           <a class="card card-link card-media" href="shop.html" aria-label="Shop all coffee">
-            <img src="assets/images/5-Borough-Coffee.png" alt="MT Mug five borough coffee lineup" loading="lazy" />
+            <img src="assets/images/5-Borough-Coffee.png" alt="MT Mug five borough coffee lineup" width="1536" height="1024" loading="lazy" decoding="async" />
             <h3>Shop All</h3>
             <p class="muted">Explore the full lineup.</p>
-            <span class="text-link">Browse →</span>
+            <span class="text-link">Browse &rarr;</span>
           </a>
 
           <a class="card card-link card-media" href="shop.html#bundles" aria-label="Shop bundles">
-            <img src="assets/images/3-Borough-Bundle.png" alt="MT Mug bundle" loading="lazy" />
+            <img src="assets/images/3-Borough-Bundle.png" alt="MT Mug bundle" width="1536" height="1024" loading="lazy" decoding="async" />
             <h3>Borough Bundles</h3>
             <p class="muted">Save when you stock up.</p>
-            <span class="text-link">Shop bundles →</span>
+            <span class="text-link">Shop bundles &rarr;</span>
           </a>
 
           <a class="card card-link card-media" href="culture.html" aria-label="Office ritual">
-            <img src="assets/images/Coffee-At-Work.png" alt="Coffee at work" loading="lazy" />
+            <img src="assets/images/Coffee-At-Work.png" alt="Coffee at work" width="1536" height="1024" loading="lazy" decoding="async" />
             <h3>Office Ritual</h3>
             <p class="muted">Built for the daily grind.</p>
-            <span class="text-link">See the vibe →</span>
+            <span class="text-link">See the vibe &rarr;</span>
           </a>
 
           <a class="card card-link card-media" href="culture.html#brewing" aria-label="Brewing guides">
-            <img src="assets/images/Brew-Action.png" alt="Brewing coffee" loading="lazy" />
+            <img src="assets/images/Brew-Action.png" alt="Brewing coffee" width="1536" height="1024" loading="lazy" decoding="async" />
             <h3>Brewing</h3>
             <p class="muted">Guides + methods that fit your setup.</p>
-            <span class="text-link">Learn →</span>
+            <span class="text-link">Learn &rarr;</span>
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section section-best-sellers" aria-label="Best sellers">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Best Sellers</h2>
+          <p class="section-subtitle">Fan favorites for the daily pour.</p>
+        </div>
+
+        <div id="best-sellers-grid" class="grid-4" data-best-sellers></div>
+        <noscript>
+          <p class="muted">Best sellers load with JavaScript. Enable it to see current picks.</p>
+        </noscript>
       </div>
     </section>
 
@@ -133,7 +162,7 @@
           <p class="muted">Five blends. Five vibes. Pick your borough and lock in your daily cup.</p>
           <div class="actions">
             <a class="btn" href="shop.html">Shop All Boroughs</a>
-            <a class="btn btn-ghost" href="#shop-by-borough">Shop by borough</a>
+            <a class="btn btn-ghost" href="#boroughs">Shop by borough</a>
           </div>
         </div>
 
@@ -141,31 +170,53 @@
           <img
             src="assets/images/5-Borough-Coffee.png"
             alt="MT Mug five borough coffee lineup"
+            width="1536"
+            height="1024"
             loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
     </section>
 
-    <!-- Shop by Borough (Interactive SVG Map) -->
-    <section id="shop-by-borough" class="section section-map" aria-label="Shop by Borough">
+    <!-- Shop by Borough -->
+    <section id="boroughs" class="section" aria-label="Shop by Borough">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Shop by Borough</h2>
-          <p class="section-subtitle">Hover and click a borough to shop that blend.</p>
+          <p class="section-subtitle">Tap a borough to shop that blend.</p>
         </div>
 
-        <div class="map-card borough-map-wrap">
-          <!-- Borough-Map.svg gets injected here -->
-          <div id="boroughMap" class="borough-map" aria-label="Interactive borough map"></div>
+        <div class="borough-grid">
+          <a class="card card-link borough-card" href="products/bronx.html" aria-label="Shop The Bronx blend">
+            <img src="assets/images/Bronx-Bag.png" alt="The Bronx blend bag" width="1024" height="1536" loading="lazy" decoding="async" />
+            <h3>The Bronx</h3>
+            <p class="muted">Light roast. Bright and smooth.</p>
+          </a>
 
-          <div class="map-actions" aria-label="Borough quick links">
-            <a class="pill-link" href="shop.html#bronx">The Bronx</a>
-            <a class="pill-link" href="shop.html#manhattan">Manhattan</a>
-            <a class="pill-link" href="shop.html#queens">Queens</a>
-            <a class="pill-link" href="shop.html#brooklyn">Brooklyn</a>
-            <a class="pill-link" href="shop.html#statenisland">Staten Island</a>
-          </div>
+          <a class="card card-link borough-card" href="products/manhattan.html" aria-label="Shop Manhattan blend">
+            <img src="assets/images/Manhattan-Bag.png" alt="Manhattan blend bag" width="1024" height="1536" loading="lazy" decoding="async" />
+            <h3>Manhattan</h3>
+            <p class="muted">Medium roast. Balanced body.</p>
+          </a>
+
+          <a class="card card-link borough-card" href="products/queens.html" aria-label="Shop Queens blend">
+            <img src="assets/images/Queens-Bag.png" alt="Queens blend bag" width="1024" height="1536" loading="lazy" decoding="async" />
+            <h3>Queens</h3>
+            <p class="muted">Light roast. Crisp finish.</p>
+          </a>
+
+          <a class="card card-link borough-card" href="products/brooklyn.html" aria-label="Shop Brooklyn blend">
+            <img src="assets/images/Brooklyn-Bag.png" alt="Brooklyn blend bag" width="1024" height="1536" loading="lazy" decoding="async" />
+            <h3>Brooklyn</h3>
+            <p class="muted">Medium roast. Classic and warm.</p>
+          </a>
+
+          <a class="card card-link borough-card" href="products/staten-island.html" aria-label="Shop Staten Island blend">
+            <img src="assets/images/Staten-Island-Bag.png" alt="Staten Island blend bag" width="1024" height="1536" loading="lazy" decoding="async" />
+            <h3>Staten Island</h3>
+            <p class="muted">Dark roast. Bold finish.</p>
+          </a>
         </div>
       </div>
     </section>
@@ -174,7 +225,7 @@
     <section class="section" aria-label="Value propositions">
       <div class="container">
         <h2 class="section-title">Built on craft.</h2>
-        <p class="section-subtitle">Simple, premium, and consistent — every bag.</p>
+        <p class="section-subtitle">Simple, premium, and consistent &mdash; every bag.</p>
 
         <div class="grid-3">
           <article class="card">
@@ -193,8 +244,23 @@
       </div>
     </section>
 
+    <!-- Routine CTA -->
+    <section class="section section-routine" aria-label="Subscription">
+      <div class="container cta-inner routine-cta">
+        <div>
+          <h2>Lock in your routine.</h2>
+          <p class="muted">Set your default bag and keep the cupboard stocked.</p>
+          <p class="muted">Pause or skip anytime.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="shop.html#bundles">Shop Borough Bundles</a>
+          <a class="btn btn-ghost" href="#get-the-drops">Get the drops</a>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
-    <section class="section section-cta section-cta--beans" aria-label="Email signup">
+    <section id="get-the-drops" class="section section-cta section-cta--beans" aria-label="Email signup">
       <div class="container cta-inner">
         <div>
           <h2>Get the drops.</h2>
@@ -202,8 +268,10 @@
         </div>
         <form class="cta-form" onsubmit="return false;">
           <label class="sr-only" for="email">Email</label>
-          <input id="email" type="email" placeholder="you@email.com" />
-          <button class="btn" type="button" id="subscribeBtn">Subscribe</button>
+          <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required aria-describedby="email-helper email-offer" />
+          <button class="btn" type="submit" id="subscribeBtn">Subscribe</button>
+          <p class="form-helper" id="email-helper">No spam. Just fresh drops and limited releases.</p>
+          <p class="form-helper form-offer" id="email-offer">Get 10% off your first order.</p>
         </form>
       </div>
     </section>
@@ -213,7 +281,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p class="muted">© <span id="year"></span> MT Mug Coffee Co.</p>
+      <p class="muted">&copy; <span id="year"></span> MT Mug Coffee Co.</p>
       <div class="footer-links">
         <a href="contact.html" class="text-link">Contact</a>
         <a href="#" class="text-link">Instagram</a>
@@ -225,6 +293,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script src="assets/js/borough-map.js"></script>
+  <script src="assets/js/best-sellers.js" defer></script>
 </body>
 </html>
