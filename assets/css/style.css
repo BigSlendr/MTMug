@@ -20,8 +20,8 @@ body{
   margin:0;
   font-family: Arial, sans-serif;
   background:
-    radial-gradient(900px 500px at 10% 0%, rgba(154,107,47,0.08), transparent 55%),
-    radial-gradient(900px 500px at 90% 20%, rgba(217,176,108,0.10), transparent 60%),
+    radial-gradient(900px 500px at 10% 0%, rgba(154,107,47,0.04), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(217,176,108,0.06), transparent 65%),
     var(--bg);
   color:var(--text);
 }
@@ -56,26 +56,26 @@ img{max-width:100%;display:block}
 
 /* Trust bar */
 .trust-bar{
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
 .trust-bar-inner{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:8px 0;
+  padding:6px 0;
 }
 .trust-list{
   display:flex;
   flex-wrap:wrap;
   align-items:center;
   justify-content:center;
-  gap:14px;
+  gap:10px 16px;
   margin:0;
   padding:0;
   list-style:none;
-  font-size:13px;
+  font-size:12px;
   font-weight:700;
   color:var(--muted);
 }
@@ -166,7 +166,7 @@ img{max-width:100%;display:block}
 
 /* Hero */
 .hero{
-  padding:56px 0 26px;
+  padding:48px 0 24px;
 }
 .hero-inner{
   display:grid;
@@ -246,18 +246,18 @@ h1{
 
 /* Hero media */
 .hero-media{
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.92);
   border:1px solid var(--line);
   border-radius: var(--radius);
   overflow:hidden;
   box-shadow: var(--shadow);
-  min-height: 360px;
+  min-height: 320px;
 }
 .hero-media img{
   width:100%;
   height:100%;
   object-fit: cover;
-  min-height: 360px;
+  min-height: 320px;
 }
 
 /* Buttons */
@@ -339,20 +339,25 @@ button:focus-visible,
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:14px;
+  align-items: stretch;
 }
 .grid-4{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   gap:14px;
+  align-items: stretch;
 }
 
 /* Cards */
 .card{
-  background: rgba(255,255,255,0.85);
+  background: #ffffff;
   border:1px solid var(--line);
   border-radius: var(--radius);
   padding:18px;
   box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 .card h3{margin:0 0 8px}
 .card p{margin:0;color:var(--muted);line-height:1.6}
@@ -374,11 +379,12 @@ button:focus-visible,
 }
 .product-card img{
   width:100%;
-  height:220px;
+  height:190px;
   object-fit:contain;
   border-radius:14px;
   border:1px solid var(--line);
   background: rgba(255,255,255,0.9);
+  padding:6px;
 }
 .product-meta{
   display:flex;
@@ -396,11 +402,16 @@ button:focus-visible,
 .card-media{
   padding:0;
   overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 .card-media img{
   width:100%;
-  height:160px;
-  object-fit: cover;
+  height:150px;
+  object-fit: contain;
+  padding:8px 10px;
+  background: #ffffff;
   border-bottom:1px solid var(--line);
 }
 .card-media h3,
@@ -421,7 +432,7 @@ button:focus-visible,
   align-items:center;
 }
 .featured-media{
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.92);
   border:1px solid var(--line);
   border-radius: var(--radius);
   overflow:hidden;
@@ -429,7 +440,7 @@ button:focus-visible,
 }
 .featured-media img{
   width:100%;
-  height:360px;
+  height:320px;
   object-fit: cover;
 }
 
@@ -442,7 +453,7 @@ button:focus-visible,
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  background: rgba(154,107,47,0.08);
+  background: rgba(154,107,47,0.05);
   border:1px solid rgba(154,107,47,0.18);
   border-radius: var(--radius);
   padding:18px;
@@ -478,7 +489,7 @@ input:focus{
 
 /* Routine CTA */
 .routine-cta{
-  background: rgba(21,21,21,0.04);
+  background: rgba(21,21,21,0.03);
   border:1px solid var(--line);
 }
 .cta-actions{
@@ -545,7 +556,7 @@ input:focus{
 }
 .borough-card img{
   width:100%;
-  height:180px;
+  height:160px;
   object-fit:contain;
   border-radius:14px;
   background: rgba(255,255,255,0.9);
@@ -592,7 +603,7 @@ input:focus{
   background-image: url("../images/Beans-Roasted.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.12;
+  opacity: 0.06;
   pointer-events:none;
 }
 
